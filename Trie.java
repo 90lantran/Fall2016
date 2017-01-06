@@ -51,6 +51,31 @@ public class Trie {
 		private void setNode(char c, TrieNode node){
 			children[getCharIndex(c)] = node;
 		}
+		
+		private void add(String s, int index){
+			size++;
+			if (index == s.length()){
+				return;
+			}
+			TrieNode child = getNode(s.charAt(index));
+			if (child == null){
+				child = new TrieNode();
+				setNode(s.charAt(index), child);
+			}
+			child.add(s, index + 1);
+			
+		}
+		
+		private int find(String s, int index){
+			if (index == s.length()){
+				return size;
+			}
+			TrieNode current = getNode(s.charAt(index));
+			if (current == null) return 0;
+			return current.find(s, index+1);
+		}
+		
+		
 	}
 	
 /**
