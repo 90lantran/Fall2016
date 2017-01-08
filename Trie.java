@@ -19,10 +19,10 @@ public class Trie {
 			String contact = in.next();
 			switch (op) {
 			case "add":
-				root.add(contact);
+				root.add(contact,0);
 				break;
 			case "find":
-				arr.add(root.find(contact));
+				arr.add(root.find(contact,0));
 				break;
 			}
 		}
@@ -173,4 +173,7 @@ public class Trie {
 //
 //		
 //	}
+	
+	
+	
 }

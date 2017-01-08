@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StairCase {
 	    
 	    public static int solve(int n, Map<Integer, Integer> memo){
-	    	if (memo.containsKey(n)) return memo.get(n);
+ 	    	if (memo.containsKey(n)) return memo.get(n);
 	        if (n < 0){
 	            return 0;
 	        } else if ( n == 0){
