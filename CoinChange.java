@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class CoinChange {
 
 	// Iteratively
-	// That is top-down, try to build an array in flight
+	// That is bottom-up, try to build an array in flight
 	static long countWays(int S[], int m, int n) {
 		// Time complexity of this function: O(mn)
 		// Space Complexity of this function: O(n)
@@ -46,7 +46,7 @@ public class CoinChange {
 	}
 
 	// recursively
-	// bottom up, using memo table
+	// top-down, using memo table
 
 	public static long makeChange(int[] coins, int money, Map<String, Long> memo) {
         if (memo.containsKey(money + "-" + coins.length)) return memo.get(money + "-" + coins.length);
